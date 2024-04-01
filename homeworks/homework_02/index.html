@@ -3,11 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Le Cinq</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Изменено на min-height для учета случаев с небольшим количеством контента */
+            background-color: #514444;
+            color: #ffffffbe;
+            flex-direction: column;
+            font-size: 28px;
+        }
+
+        .content {
+            max-width: 1200px; /* Ширина контента */
+            padding: 40px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 30px;
+            margin: 0; 
+        }
+
+        /* Стили для кнопки */
+        button {
+            padding: 10px 20px;
+            font-size: 28px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        /* Стили для изображения */
+        img {
+            max-width: 150%;
+            height: auto;
+        }
+
+        /* Стили для раздела RESERVATION */
+        #reservation {
+            margin-top: 100px; /* Увеличено для улучшенного разделения контента */
+        }
+
+        /* Стили для текста "DINNER" */
+        .dinner-text {
+            font-size: 28px;
+            float: left;
+            text-align: left;
+        }
+
+        /* Стили для текста времени */
+        .time-text {
+            font-size: 28px;
+            float: right;
+            text-align: right;
+        }
+
+        .image-container {
+            display: flex;
+            overflow-x: auto;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: inline-block; /* Размещаем изображения в одной строке */
+            margin-right: 10px; /* Добавляем небольшой отступ между изображениями */
+        }
+    </style>
 </head>
 <body>
-    
 
+<div class="content">
+
+    <h1>Le Cinq (Four Seasons, Hotel George V)</h1>
+    <img src="https://www.chefspencil.com/wp-content/uploads/Le-Cinq.jpeg.webp" alt="Le Cinq (Four Seasons, Hotel George V)">
+    <br>
+    <br>
+    <br>
+    <p>A Paris destination in its own right, Le Cinq by Christian Le Squer is synonymous with the apex 
+    of French modern and elegant cuisine, paired with the rarest wines selected by award-winning
+    Head Sommelier Eric Beaumard. 
+    Its three Michelin stars are a reflection of the gastronomic 
+    experience of a lifetime – in one of the city’s
+    most majestic dining rooms.</p>
+    <br>
+    <br>
+
+    <button onclick="scrollToReservation()">Make a reservation</button>
+    <br>
+    <br>
+    <br>
+
+    <div class="Heading TableList-heading">
+        <h2 class="Heading-title ty-h2" id="hours"><p>HOURS</p></h2>
+    </div>
+        <div class="TableList TableList-table">
+            <div class="TableList-container TableList-container--dark">
+                <div class="row"> 
+                    <d1 class="TableList-item col-sm-12">
+                        <d1 class="TableList-item">
+                            <dt class="TableList-item-title ty-c1">
+                                <span class="dinner-text">DINNER</span> <!-- Изменено -->
+                                <span class="time-text">7:00 PM - 10:00 PM</span> <!-- Изменено -->
+                            </dt>
+                        </d1>
+                    </d1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<br>
+<br>
+<br>
+<h2>SIGNATURE DISHES</h2>
+<div class="image-container"> 
+    <img src="https://www.fourseasons.com/alt/img-opt/~80.1530.0,0000-191,2676-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/PAR/PAR_1052_original.jpg" alt="dinner1">
+    <img src="https://www.fourseasons.com/alt/img-opt/~80.1530.80,4444-0,0000-2839,1111-1597,0000/publish/content/dam/fourseasons/images/web/PAR/PAR_1776_original.jpg" alt="dinner2">
+    <img src="https://www.fourseasons.com/alt/img-opt/~80.1530.0,0000-815,0413-2000,0000-1125,0000/publish/content/dam/fourseasons/images/web/PAR/PAR_1584_original.jpg" alt="dinner3">
+</div>
+
+<!-- Placeholder for reservation section -->
+<div id="reservation">
+    <h2>RESERVATION</h2>
+    <!-- Ваша форма регистрации здесь -->
+</div>
+
+
+<script>
+    function scrollToReservation() {
+        var reservationSection = document.getElementById('reservation');
+        reservationSection.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+<br>
+<form method="get">
+    <label>
+        Enter a name
+        <input type="text" name="name">
+    </label>
+    <br>
+    <label>
+        Enter a date 
+        <input type="date" name="date">
+    </label>
+    <br>
+    <label>
+        Enter the number of people <input type="number" name="numberOfPerson">
+    </label>
+    <br>
+    <br>
+    Add additional information
+    <label>
+        <textarea name="info" id="info" cols="30" rows="5" maxlength="30"></textarea>
+    </label>
+    <br>
+    Choose a time
+    <label>
+        <select name="time" multiple>
+            <option value="7:00">7:00 pm </option>
+            <option value="7:30">7:30 pm </option>
+            <option value="8:00">8:00 pm </option>
+            <option value="8:30">8:30 pm </option>
+            <option value="9:00">9:00 pm </option>
+            <option value="9:30">9:30 pm </option>
+            <option value="10:00">10:00 pm </option>
+        </select>
     
+    </label>
+    <br>
+    Additionally, where your table will be:
+    <br>
+    <label>
+        By the window
+        <input type="radio" name="table_place" value="window">
+    </label>
+    <label>
+        In the center
+        <input type="radio" name="table_place" value="center" checked>
+    </label>
+    <br>
+    <input type="reset" value="Clear">
+    <button type="submit">Send</button>    
+
+</form>
+
+
+
+
 </body>
 </html>
