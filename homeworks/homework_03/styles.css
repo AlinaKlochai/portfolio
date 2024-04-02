@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Изменено на min-height для учета случаев с небольшим количеством контента */
+    background-color: #514444;
+    color: #ffffffbe;
+    flex-direction: column;
+    font-size: 28px;
+}
+
+.content {
+    max-width: 1200px; /* Ширина контента */
+    padding: 40px;
+    text-align: center;
+}
+
+p {
+    font-size: 30px;
+    margin: 0; 
+}
+
+/* Стили для кнопки */
+button {
+    padding: 10px 20px;
+    font-size: 28px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Стили для изображения */
+img {
+    max-width: 150%;
+    height: auto;
+}
+
+/* Стили для раздела RESERVATION */
+#reservation {
+    margin-top: 50px; /* Увеличено для улучшенного разделения контента */
+}
+
+/* Стили для текста "DINNER" */
+.dinner-text {
+    font-size: 28px;
+    float: left;
+    text-align: left;
+}
+
+/* Стили для текста времени */
+.time-text {
+    font-size: 28px;
+    float: right;
+    text-align: right;
+}
+
+.image-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block; /* Размещаем изображения в одной строке */
+    margin-right: 10px; /* Добавляем небольшой отступ между изображениями */
+}
+.button_submit{
+            padding: 2px; 
+             width: 100px;
+            height: 45px;
+            border: 2px;
+            font-size: 28px;
+}
+.button_clear{
+    padding: 2px; 
+    width: 90px;
+    height: 45px;
+    border: 2px;
+    font-size: 28px;
+}
