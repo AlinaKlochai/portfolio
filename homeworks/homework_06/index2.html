@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles2.css">
+    <title>Shop</title>
+</head>
+
+<body>
+    <header class="header_main">
+        <div class="button_container">
+            <button class="button_header">
+                <a href="./index.html">ABOUT OUR SHOP</a>
+            </button>
+            <button class="button_header">
+                <a href="./index2.html">ELECTRONICS</a>
+            </button>
+            <button class="button_header">
+                <a href="./index3.html">HEALTH</a>
+            </button>
+            <button class="button_header">
+                <a href="./index4.html">GARTEN</a>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container_for_cards">
+            <div class="products" id="TV">
+                <div class="info_about_product">
+                    <img src="./img/television.png" alt="tv">
+                    TV
+                    <br>
+                    OLED TV
+                    <br>
+                    UHD 4K
+                    <br>
+                    246 cm / 97 Zoll
+                    120 Hz
+                    <br>
+                    <button class="main_button">Add to corb</button>
+                </div>
+            </div>
+            <div class="products" id="Phone">
+                <div class="info_about_product">
+                    <img src="./img/phone.png" alt="phone">
+                    Phone
+                    <br>
+                    17.25 cm / 6.8 Zoll
+                    <br>
+                    12 GB
+                    <br>
+                    Android
+                    <button class="main_button">Add to corb</button>
+                </div>
+            </div>
+            <div class="products" id="Washing machine">
+                <div class="info_about_product">
+                    <img src="./img/waschmaschine.png" alt="waschmaschine">
+                    Washing machine
+                    <br>
+                    7 kg
+                    <br>
+                    74 dB (A)
+                    <br>
+                    B
+                    <button class="main_button">Add to corb</button>
+                </div>
+            </div>
+            <div class="products" id="Camera">
+                <div class="info_about_product">
+                    <img src="./img/camera.png" alt="camera">
+                    Camera
+                    <br>
+                    24.7 Megapixel
+                    <br>
+                    24.1 Megapixel
+                    <br>
+                    3x / -
+                    <button class="main_button">Add to corb</button>
+                </div>
+            </div>
+            <div class="products" id="PC">
+                <div class="info_about_product">
+                    <img src="./img/pc.png" alt="pc">
+                    PC
+                    <br>
+                    Intel Core i7-6700
+                    <br>
+                    16 GB
+                    <br>
+                    960 GB
+                    <button class="main_button">Add to corb</button>
+                </div>
+            </div>
+            <div class="products" id="Gaming Maus">
+                <div class="info_about_product">
+                    <img src="./img/maus.png" alt="maus">
+                    Gaming Maus
+                    <br>
+                    USB
+                    <br>
+                    100-16000 dpi
+                    <button class="main_button">Add to corb</button>
+                </div>
+            </div>
+        </div>
+        <!-- Добавим пустой блок для выравнивания -->
+        <div class="spacer"></div>
+
+        </div>
+    </main>
+
+    <aside class="client_info">
+        <div>
+            Hi, this is your corb
+            <div id="cart_items">
+                <!-- Это место, куда будут добавляться товары -->
+            </div>
+        </div>
+    </aside>
+
+    <footer class="footer">
+        <div>
+            <h2>INFORMATION</h2>
+            HOW TO CONTACT US
+            <ul>
+                <li>
+                    +490000000
+                </li>
+                <li>
+                    shop@tuta.io
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        // Получаем все кнопки "Add to corb"
+        var buttons = document.querySelectorAll('.main_button');
+        
+        // Добавляем обработчик события для каждой кнопки
+        buttons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                // Получаем id товара
+                var itemId = this.closest('.products').id;
+                
+                // Создаем новый элемент для отображения товара в корзине
+                var newItem = document.createElement('div');
+                newItem.textContent = itemId;
+                
+                // Добавляем новый элемент в блок с корзиной
+                document.getElementById('cart_items').appendChild(newItem);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

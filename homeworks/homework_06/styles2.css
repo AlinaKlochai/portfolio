@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.header_main {
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    background-color: #6d5b5b59;
+    top: 0;
+    left: 0;
+    /* при прокрутке header будет сверху всего */
+    z-index: 1000;       
+}
+
+.button_container {
+    display: flex;
+    /* Это распределит кнопки равномерно по контейнеру * */
+    justify-content: space-between;
+
+}
+
+.button_header {
+    cursor: pointer;
+    margin: 0 5px;
+    width: 485px;
+    margin-top: 7px;
+    padding: 20px;
+    background-color: #614152;
+    color: #fff2f9d2;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+
+}
+
+/* открючили подствечивание другим цветом */
+.button_header a {
+    text-decoration: none;
+    /* Убираем подчеркивание */
+    color: inherit;
+    /* Наследуем цвет текста от родительского элемента */
+}
+
+body {
+    background-color: rgb(176, 166, 166);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(240, 248, 255, 0.905);
+    font-size: 25px;
+}
+
+main {
+    display: flex;
+}
+
+.container_for_cards {
+    position: relative;
+    margin-left: 80px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Позволяет переносить карточки на новую строку */
+    justify-content: space-between; /* Равномерно распределяем карточки по контейнеру */
+    
+} 
+
+.products {
+    width: calc(33.33% - 33.33px);
+    min-width: 300px;
+    max-width: 500px;
+    height: 500px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    margin-right: 0px;  
+    margin-bottom: 50px;
+    box-sizing: border-box; /* Учитываем отступы и рамку в расчетах ширины */
+    display: flex; /* Добавляем flex-контейнер */
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    align-items: center; /* Центрируем содержимое по вертикали */
+    
+} 
+
+img{
+    background-color: white;
+    width: 250px;
+    height: auto;
+}
+
+.info_about_product{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main_button{
+    background-color: #614152;
+    color: aliceblue;
+    font-size: 25px;
+}
+
+
+.client_info{
+    margin-left: 1530px;  
+    margin-top: -1127px; 
+    background-color: #614152;
+    width: 400px;
+    height: 1050px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    top: 0; /* Расположение блока .client_info относительно верхней границы контейнера */
+}
+
+.spacer {
+    flex-basis: 36%; /* Растягиваем пустой блок, чтобы прогнать .client_info под карточки */
+}
+
+.footer{
+    background-color: #6d5b5b59;
+    margin-top: 30px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    
+}
