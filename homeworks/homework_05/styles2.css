@@ -69,11 +69,12 @@ body {
 
 .container_for_cards {
     margin-top: 80px;
+    position: relative;
     flex-direction: column; /* Карточки будут располагаться вертикально */
     align-items: flex-end;
 } 
 
- .cart_1 {
+.cart_1 {
     width: 400px;
     height: 500px;
     border: 2px solid #b8bfca6b;
@@ -82,13 +83,24 @@ body {
     font-size: 22px;
     align-items: center;  
     padding: 80px;
-    position: relative;
     overflow: hidden;
     
 } 
 
-.cart_1 + .cart_1 {
-    margin-top: -50px; /* Каждая следующая карточка сдвигается немного вверх относительно предыдущей */
+.block_1{
+    position: absolute;
+    right: 1200px;
+}
+
+.block_2{
+    position: absolute;
+    top: 620px;
+    left: 750px;
+}
+
+.block_3{
+    position: absolute;
+    left: 1270px;
 }
 
 .img_rob_swire img {
