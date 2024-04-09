@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- подключение js через тег script -->
+    <script>
+        console.log('hello');
+    </script>
+    <!-- САМОЕ ВЕРНОЕ ПОДКЛЮЧЕНИЕ-->
+    <script src="./index.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>zagolovok</h1>
+    <!-- такого подключение не применяеться -->
+    <button onclick="console.log('hello bottom')">ok</button>
+    <!-- подключение js через тег script внутри body -->
+    <!-- раньше делали так, было более надежным подкобючение -->
+    <script>
+        console.log('hello 222');
+    </script>
+</body>
+</html>
