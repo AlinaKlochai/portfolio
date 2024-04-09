@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: yellow;
+    height: 200px;
+}
+
+.content-wrapper{
+    display: flex;
+    height: 1000px;
+}
+
+.aside{
+    flex-grow: 1;
+    background-color: aqua;
+    height: 100%;
+}
+
+.main{
+    flex-grow: 5;
+    background-color: cadetblue;
+    height: 100%;
+}
+
+.footer{
+    background-color: gray;
+    height: 200px;
+}
