@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../mainPageStyles.css">
+    <link rel="stylesheet" href="./../health/healthStyles.css">
+    <title>Shop</title>
+</head>
+
+<body>
+    <header class="header_main">
+        <div class="button_container">
+            <button class="button_header">
+                <a href="./../../index.html">ABOUT OUR SHOP</a>
+            </button>
+            <button class="button_header">
+                <a href="./../electronics/index.html">ELECTRONICS</a>
+            </button>
+            <button class="button_header">
+                <a href="./../health/index.html">HEALTH</a>
+            </button>
+            <button class="button_header">
+                <a href="./../garten/index.html">GARTEN</a>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container_for_cards">
+            <div class="products" id="Vitamin_C">
+                <div class="info_about_product">
+                    <img src="./../../img/vitamin-c.png" alt="Vitamin_C 300mg">
+                    Vitamin_C
+                    <br>
+                    <br>
+                    300mg
+                    <br>
+                    <button class="main_button">Add to corb</button>
+                </div>
+            </div>
+            <div class="products" id="B12">
+                <div class="info_about_product">
+                    <img src="./../../img/b12.png" alt="b12 50mg">
+                    B12
+                    <br>
+                    <br>
+                    50mg
+                    <button class="main_button">Add to corb</button>
+                </div>
+            </div>
+            <div class="products" id="D3 2500IU">
+                <div class="info_about_product">
+                    <img src="./../../img/d3.png" alt="d3">
+                    D3
+                    <br>
+                    <br>
+            
+                    2500IU
+                    <button class="main_button">Add to corb</button>
+                </div>
+            </div>
+            <div class="products" id="Vitamin_C">
+                <div class="info_about_product">
+                    <img src="./../../img/vitamin-c.png" alt="Vitamin_C 30mg">
+                    Vitamin_C
+                    <br>
+                    <br>
+                    30mg
+                    <br>
+                    <button class="main_button">Add to corb</button>
+                </div>
+            </div>
+            <div class="products" id="B12">
+                <div class="info_about_product">
+                    <img src="./../../img/b12.png" alt="b12 70mg">
+                    B12
+                    <br>
+                    <br>
+                    70mg
+                    <button class="main_button">Add to corb</button>
+                </div>
+            </div>
+            <div class="products" id="D3 3000IU">
+                <div class="info_about_product">
+                    <img src="./../../img/d3.png" alt="d3">
+                    D3
+                    <br>
+                    <br>
+            
+                    3000IU
+                    <button class="main_button">Add to corb</button>
+                </div>
+            </div>
+        </div>
+        <!-- Добавим пустой блок для выравнивания -->
+        <div class="spacer"></div>
+
+        </div>
+    </main>
+
+    <aside class="client_info">
+        <div>
+            Hi, this is your corb
+            <div id="cart_items">
+                <!-- Это место, куда будут добавляться товары -->
+            </div>
+        </div>
+    </aside>
+
+    <footer class="footer">
+        <div>
+            <h2>INFORMATION</h2>
+            HOW TO CONTACT US
+            <ul>
+                <li>
+                    +490000000
+                </li>
+                <li>
+                    shop@tuta.io
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- <script>
+        // Получаем все кнопки "Add to corb"
+        var buttons = document.querySelectorAll('.main_button');
+        
+        // Добавляем обработчик события для каждой кнопки
+        buttons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                // Получаем id товара
+                var itemId = this.closest('.products').id;
+                
+                // Создаем новый элемент для отображения товара в корзине
+                var newItem = document.createElement('div');
+                newItem.textContent = itemId;
+                
+                // Добавляем новый элемент в блок с корзиной
+                document.getElementById('cart_items').appendChild(newItem);
+            });
+        });
+    </script> -->
+
+</body>
+
+</html>
