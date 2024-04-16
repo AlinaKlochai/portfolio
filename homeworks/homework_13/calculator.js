@@ -1,79 +1,83 @@
-
-const firstNumInput = document.getElementById('firstNum');
-const secondNumInput = document.getElementById('secondNum');
-
+const calcInput = document.getElementById('calcInput');
+let currentNum = '';
+let prevNum = '';
 let sign = null;
+let exampleString = ''; // Строка для хранения примера
 
-// подписка на событие кнопок цифр
+// Обновление дисплея
+function updateDisplay() {
+    calcInput.value = exampleString + currentNum;
+}
+
+// Обработка нажатия кнопок цифр
 const numButtons = document.getElementsByClassName('num');
 for (let i = 0; i < numButtons.length; i++) {
     numButtons[i].addEventListener('click', (e) => {
+        currentNum += e.target.innerText;
+        updateDisplay();
+    });
+}
 
-        if (!sign) {
-            firstNumInput.value += e.target.innerText;
-        } else {
-            secondNumInput.value += e.target.innerText;
+// Обработка нажатия математических знаков
+const signButtons = document.getElementsByClassName('sign');
+for (let i = 0; i < signButtons.length; i++) {
+    signButtons[i].addEventListener('click', (e) => {
+        if (currentNum !== '') {
+            prevNum = currentNum;
+            currentNum = '';
+            sign = e.target.innerText;
+            exampleString = prevNum + sign;
+            updateDisplay();
         }
     });
 }
 
-// подписка на событие математических знаков
-const signButtons = document.getElementsByClassName('sign');
-for (let i = 0; i < signButtons.length; i++) {
-    signButtons[i].addEventListener('click', (e) => {
-        sign = e.target.innerText;
-    });
-}
-
-// подписка события кнопки равно
+// Обработка нажатия кнопки "="
 const resBtn = document.getElementById('res');
 resBtn.addEventListener('click', () => {
-    const firstVal = parseInt(firstNumInput.value);
-    const secondVal = parseInt(secondNumInput.value);
-    const res = calculate(firstVal, secondVal, sign);
-    console.log(res);
-
-    clearInputsValue();
+    if (currentNum !== '' && prevNum !== '' && sign !== null) {
+        const result = calculate();
+        calcInput.value = result;
+        currentNum = result.toString();
+        prevNum = '';
+        sign = null;
+        exampleString = '';
+    }
 });
 
-//отработка кнопки ac(стирает все написанное пользователем)
+// Обработка нажатия кнопки AC (очистка)
 const acBtn = document.getElementById('ac');
 acBtn.addEventListener('click', () => {
-    clearInputsValue();
-})
+    clear();
+});
 
-function clearInputsValue(){
-   firstNumInput.value = '';
-   secondNumInput.value = '';
-   sign = null; 
+// Функция очистки всех значений
+function clear() {
+    calcInput.value = '';
+    currentNum = '';
+    prevNum = '';
+    sign = null;
+    exampleString = '';
 }
 
-//отработка кнопки "=" чтобы чистился весь инпут после нажатия
-
-// 
-const calculate = (a, b, sign) => {
+// Функция вычисления результата
+function calculate() {
+    const num1 = parseFloat(prevNum);
+    const num2 = parseFloat(currentNum);
     switch (sign) {
         case '+':
-            return a + b;
+            return num1 + num2;
         case '-':
-            return a - b;
+            return num1 - num2;
         case '*':
-            return a * b;
+            return num1 * num2;
         case '/':
-            if(b === 0){
-            console.log("This operation is impossible. Because you cannot divide by zero");
-            }else
-            return a / b;
-            
-
+            if (num2 === 0) {
+                alert("Division by zero is not allowed!");
+                return '';
+            }
+            return num1 / num2;
         default:
-            break;
+            return '';
     }
 }
-
-
-
-// const res = calculate(1, 2, '+');
-// console.log(res);
-
-

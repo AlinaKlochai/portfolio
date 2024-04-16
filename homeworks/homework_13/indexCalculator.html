@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,30 +9,42 @@
     <link rel="icon" href="./img/calc.png">
     <title>Calculator</title>
 </head>
+
 <body>
     <div class="calc-wrapper">
-        <input type="number" id="firstNum">
-        <input type="number" id="secondNum">
-        <br>
-        <button class="num">0</button>
-        <button class="num">1</button>
-        <button class="num">2</button>
-        <button class="num">3</button>
-        <button class="num">4</button>
-        <button class="num">5</button>
-        <button class="num">6</button>
-        <button class="num">7</button>
-        <button class="num">8</button>
-        <button class="num">9</button>
-        <br>
-        <button class="sign">+</button>
-        <button class="sign">-</button>
-        <button class="sign">*</button>
-        <button class="sign">/</button>
-        <br>
-        <button id="ac">AC</button>
-        <button id="res">=</button>
+        <div class="input-wrapper">
+            <!-- <input type="number" id="firstNum">
+            <input type="number" id="secondNum"> -->
+            <input type="text" id="calcInput" readonly>
+        </div>
+
+        <div class="numBtn-wrapper">
+            <button class="num">0</button>
+            <button class="num">1</button>
+            <button class="num">2</button>
+            <button class="num">3</button>
+            <button class="num">4</button>
+            <button class="num">5</button>
+            <button class="num">6</button>
+            <button class="num">7</button>
+            <button class="num">8</button>
+            <button class="num">9</button>
+        </div>
+
+
+        <div class="sighBtn-wrapper">
+            <button class="sign">+</button>
+            <button class="sign">-</button>
+            <button class="sign">*</button>
+            <button class="sign">/</button>
+        </div>
+
+        <div class="resAc-wrapper">
+            <button id="ac">AC</button>
+            <button id="res">=</button>
+        </div>
 
     </div>
 </body>
+
 </html>

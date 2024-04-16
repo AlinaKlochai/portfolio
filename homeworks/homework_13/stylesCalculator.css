@@ -6,8 +6,16 @@
 
 body{
     font-size: 40px;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Высота равная высоте окна браузера */
+    margin: 0;
 
+}
+
+.input-wrapper{
+    
 }
 
 .calc-wrapper{
@@ -18,8 +26,4 @@ body{
     border-radius: 10px;
     margin-right: 0px;  
     margin-bottom: 50px;
-    box-sizing: border-box; /* Учитываем отступы и рамку в расчетах ширины */
-   
-    justify-content: center; /* Центрируем содержимое по горизонтали */
-    align-items: center; /* Центрируем содержимое по вертикали */
 }
