@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    font-size: 40px;
+    
+
+}
+
+.calc-wrapper{
+    min-width: 300px;
+    max-width: 500px;
+    height: 500px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    margin-right: 0px;  
+    margin-bottom: 50px;
+    box-sizing: border-box; /* Учитываем отступы и рамку в расчетах ширины */
+   
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    align-items: center; /* Центрируем содержимое по вертикали */
+}
