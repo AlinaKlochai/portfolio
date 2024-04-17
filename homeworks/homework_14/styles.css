@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative; 
+    background-image: url('https://images.unsplash.com/photo-1687985826611-80b714011d0b?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+    background-size: cover;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Высота равная высоте окна браузера */
+    margin: 0;
+}
+
+body button{
+    font-size: 20px;
+}
+
+.wrapper{
+    min-width: 1000px;
+    max-width: 900px;
+    height: 500px;
+    border-radius: 10px;
+    margin-right: 0px;  
+    margin-bottom: 50px;
+    background-color: rgba(245, 245, 220, 0.432);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+button{
+    height: 100px;
+    width: 120px;
+    border-radius: 5px;
+    background-color: rgb(227, 206, 179);
+    margin-top: 20px;
+    
+}
+
+.innerText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Распределить элементы внутри по вертикали с равным промежутком */
+    align-items: center;
+}
+
+.crewCard{
+    background-color:  rgba(245, 245, 220, 0.432);
+}
+
