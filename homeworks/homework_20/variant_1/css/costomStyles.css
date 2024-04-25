@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.timer-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: -100px;
+    /* Добавляем небольшое смещение вверх, чтобы элементы были ближе к центру */
+}
+
+.timer {
+    font-size: 72px;
+    /* увеличиваем размер таймера */
+    font-weight: bold;
+    color: #333;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    /* увеличиваем ширину таймера */
+    margin: 0 auto;
+}
+
+.btn {
+    margin-top: 20px;
+    /* добавляем отступ для кнопки */
+}

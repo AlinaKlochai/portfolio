@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+}
+
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: -100px; /* Добавляем небольшое смещение вверх, чтобы элементы были ближе к центру */
+}
+
+.timer-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.aac-Btn {
+    border: 2px solid #000000;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    margin-top: 17px;
+    margin-left: 8px; /* Переместили кнопку вправо */
+    background-color: #000000;
+}
+
+.aac-Btn img{
+    width: 50px;
+  
+}
+
+.timer {
+    font-size: 72px; /* увеличиваем размер таймера */
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px; /* увеличиваем ширину таймера */
+    margin: 0 auto;
+}
+
+.aac-Btn{
+    
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    margin-top: 17px;
+    margin-left: 5px;
+}
+
+.btn {
+    margin-top: 20px; /* добавляем отступ для кнопки */
+    border: unset;
+}
+
+.btn img{
+    width: 100px;
+}
+
+.numBtn-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Отступ между рядами */
+}
+
+.num {
+    background-color: #000000;
+    color: #ffffff;
+    height: 70px;
+    width: 70px;
+    font-size: 45px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+
+}
+
