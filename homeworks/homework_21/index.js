@@ -33,12 +33,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function delay(value) {
     return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (isNaN(value)) {
-                reject('The argument is not a number');
-            } else {
+        if (isNaN(value)) {
+            reject('The argument is not a number');
+        } else {
+            setTimeout(() => {
                 resolve(value * value);
-            }
-        }, 5000);
+            }, 5000);
+        }
     });
 }
