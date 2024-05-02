@@ -1,0 +1,11 @@
+const url = 'https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}'
+const apiKey = 'aabb7198e3330c26cf711e640e58f945'
+
+//для Берлина
+//https://api.openweathermap.org/data/2.5/weather?q=berlin&appid=aabb7198e3330c26cf711e640e58f945&units=metric
+
+&units=metric - добавляем в конце чтобы пересчитать из фарингейтов в цельсий
+&lang=ru - для русского
+
+Реализовать приложение прогноз погоды для города
+На странице есть элемент intput с типом text, пользователь вводит название города и нажимает кнопку - показать - и после этого видит погоду для этого города

@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #da9a56a0;
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+#enterCityBtn {
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+#enterCityBtn img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #b68644;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 14px;
+    font-size: 18px; 
+}
+
+button:hover {
+    background-color: #a15d1d;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+.input-container input[type="text"] {
+    font-size: 20px;
+}
+
+.input-container button {
+    padding: 10px 20px;
+    background-color: #7c8792;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 10px; 
+}
+
+.loader {
+    border: 5px solid #030202;
+    border-top: 5px solid #a75f07;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#additionalButton {
+    display: none;
+    color: #000;
+    border: #8b5220 1px solid;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-bottom: 10px;
+}
+
+
+#weatherInfo {
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #da9a56a0;
+   
+}
+
+p {
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
