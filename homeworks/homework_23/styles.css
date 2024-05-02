@@ -5,20 +5,20 @@ body {
     background-color: #f8f8f8;
 }
 
-/* Button styles */
+/* Стили для кнопки */
 #showAllUnis {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #7c8288;
+    background-color: #7c8084;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-/* List styles */
+/* Стили для списка */
 ul {
     list-style-type: none;
     padding: 0;
@@ -32,8 +32,17 @@ li {
     margin-bottom: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* Плавный переход для цвета фона */
 }
 
-li:hover {
-    background-color: #f0f0f0;
+/* Стили для ссылок внутри списка */
+li a {
+    color: inherit; /* Наследуем цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    cursor: pointer; /* Делаем курсор указателем при наведении */
+}
+
+/* При наведении добавляем небольшую анимацию */
+li a:hover {
+    opacity: 0.8;
 }
