@@ -80,34 +80,44 @@ function updateButtonText() {
     }
 }
 
-
 enterCityBtn.addEventListener('click', function () {
-    const cityName = inputCurrentCity.value;
+    try {
+        const cityName = inputCurrentCity.value;
 
-    // Показываем спиннер перед началом запроса данных
-    showLoader();
+        // Проверяем, было ли введено имя города
+        if (!cityName.trim()) {
+            alert("To display weather information, you need to enter the name of the city.");
+            return; // Прерываем выполнение функции, чтобы не выполнять запрос
+        }
 
-    // Отправляем запрос к API погоды
-    fetchWeatherData(cityName)
-        .then(data => {
-            const currentDate = new Date();
-            const formattedDate = formatDate(currentDate);
-            const weatherDescription = data.weather[0].main;
-            const temperature = Math.round(data.main.temp);
-            const tempFeelsLike = Math.round(data.main.feels_like);
-            const iconCode = data.weather[0].icon;
-            const iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
+        // Показываем спиннер перед началом запроса данных
+        showLoader();
 
-            // Устанавливаем таймер для отображения данных после задержки
-            setTimeout(() => {
-                // Останавливаем анимацию спиннера и отображаем основную информацию
+        // Отправляем запрос к API погоды
+        fetchWeatherData(cityName)
+            .then(data => {
+                const currentDate = new Date();
+                const formattedDate = formatDate(currentDate);
+                const weatherDescription = data.weather[0].main;
+                const temperature = Math.round(data.main.temp);
+                const tempFeelsLike = Math.round(data.main.feels_like);
+                const iconCode = data.weather[0].icon;
+                const iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
+
+                // Устанавливаем таймер для отображения данных после задержки
+                setTimeout(() => {
+                    // Останавливаем анимацию спиннера и отображаем основную информацию
+                    hideLoader();
+                    displayBasicWeatherInfo(formattedDate, temperature, tempFeelsLike, weatherDescription, iconUrl);
+                }, 2000); 
+            })
+            .catch(error => {
                 hideLoader();
-                displayBasicWeatherInfo(formattedDate, temperature, tempFeelsLike, weatherDescription, iconUrl);
-            }, 3000); 
-        })
-        .catch(error => {
-            console.error(error.message);
-        });
+                alert('You have entered the wrong city name. Please, try again.');
+            });
+    } catch (error) {
+        console.error('Error:', error);
+    }
 });
 
 let additionalInfoDisplayed = false; // Флаг для отслеживания отображения дополнительной информации
@@ -118,20 +128,21 @@ weatherInfoDiv.addEventListener('click', function (event) {
         const cityName = inputCurrentCity.value;
 
         if (!additionalInfoDisplayed) {
-            // Отправляем запрос к API погоды для получения дополнительной информации
-            fetchWeatherData(cityName)
-                .then(data => {
-                    const pressure = data.main.pressure;
-                    const humidity = data.main.humidity;
+            try {
+                // Отправляем запрос к API погоды для получения дополнительной информации
+                fetchWeatherData(cityName)
+                    .then(data => {
+                        const pressure = data.main.pressure;
+                        const humidity = data.main.humidity;
 
-                    // Отображаем дополнительную информацию о погоде
-                    displayAdditionalWeatherInfo(pressure, humidity);
-                    additionalInfoDisplayed = true;                          // Устанавливаем флаг отображения дополнительной информации
-                    updateButtonText();                                    // Обновляем текст кнопки
-                })
-                .catch(error => {
-                    console.error(error.message);
-                });
+                        // Отображаем дополнительную информацию о погоде
+                        displayAdditionalWeatherInfo(pressure, humidity);
+                        additionalInfoDisplayed = true;                          // Устанавливаем флаг отображения дополнительной информации
+                        updateButtonText();                                    // Обновляем текст кнопки
+                    });
+            } catch (error) {
+                console.error(error.message);
+            }
         } else {
             // Скрываем дополнительную информацию
             const additionalInfoDiv = document.getElementById('additionalInfo');
