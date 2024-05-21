@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.the-team{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+.carousel-container {
+    margin-top: 60px;
+}
+
+.carousel-item img {
+    height: 500px; /* Задаем фиксированную высоту изображения */
+    width: 100%; /* Растягиваем изображение на всю ширину контейнера */
+}
+
+.main-text {
+    text-align: justify;
+    font-size: 25px;
+    padding-top: 20px;
+    margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+    .main-text {
+        margin-top: 20px; /* Отступ сверху при уменьшении экрана */
+    }
+}
